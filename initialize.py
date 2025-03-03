@@ -31,7 +31,3 @@ fullGreet = f"[green]{greeting}[/green] \n [yellow]Created By[/yellow]: {author}
 def showGreeting():
     console.print(fullGreet)
 
-def initialOptions():
-    choice = input("What would you like to do?")
-    if choice == "a":
-        print("A")
