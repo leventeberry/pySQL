@@ -1,6 +1,9 @@
 import sys
 import os
 from datetime import datetime
+from rich.console import Console
+
+console = Console()
 
 greeting = r"""
 ////////////////////////////////////////////////////////////////////////////
@@ -17,15 +20,18 @@ greeting = r"""
 ////////////////////////////////////////////////////////////////////////////
 """
 
-appInializationDate = datetime.now()
+appInitializationDate = datetime.now()
 currentPath = os.getcwd()
 processID = os.getpid()
 pythonVersion = sys.version
 gitHubLink = "https://github.com/leventeberry/pySQL"
 author = "LeVente Berry Jr."
-
-fullGreet = f"{greeting} \n Created By: {author} \n App Started at: {appInializationDate} \n App Process ID: {processID} \n App Path: {currentPath} \n GitHub Link: {gitHubLink}"
-
+fullGreet = f"[green]{greeting}[/green] \n [yellow]Created By[/yellow]: {author} \n [yellow]App Started at[/yellow]: {appInitializationDate} \n [yellow]App Process ID[/yellow]: {processID} \n [yellow]App Path[/yellow]: {currentPath} \n [yellow]GitHub Link[/yellow]: {gitHubLink}"
 
 def showGreeting():
-    return fullGreet
+    console.print(fullGreet)
+
+def initialOptions():
+    choice = input("What would you like to do?")
+    if choice == "a":
+        print("A")
