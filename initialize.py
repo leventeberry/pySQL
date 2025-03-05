@@ -1,6 +1,6 @@
 import sys
 import os
-from datetime import datetimepython3 -m venv venv
+from datetime import datetime
 
 from rich.console import Console
 
@@ -31,4 +31,3 @@ fullGreet = f"[green]{greeting}[/green] \n [yellow]Created By[/yellow]: {author}
 
 def showGreeting():
     console.print(fullGreet)
-
