@@ -1,6 +1,7 @@
 import sys
 import os
-from datetime import datetime
+from datetime import datetimepython3 -m venv venv
+
 from rich.console import Console
 
 console = Console()

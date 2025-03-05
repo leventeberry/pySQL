@@ -1,0 +1,1 @@
+git@github.com:leventeberry/pySQL.git
